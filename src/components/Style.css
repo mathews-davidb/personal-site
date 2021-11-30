@@ -1,0 +1,155 @@
+nav {
+  width: 100%;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  padding: 1.2em 0;
+  color: #05386b;
+  background-color: #5cdb95;
+  max-height: 4em;
+  display: flex;
+  justify-content: end;
+}
+
+/* nav span {
+  font-size: 25px;
+  font-family: "Bebas Neue";
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s ease;
+  transition-delay: 0.25s;
+  margin: 1em;
+  padding-bottom: 0.3em;
+  margin-right: 2rem;
+} */
+
+nav span {
+  font-size: 18px;
+  font-family: "Bebas Neue";
+  font-size: 20px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s ease;
+  transition-delay: 0.25s;
+  margin: 1em;
+  padding-bottom: 0.3em;
+}
+
+nav span:hover {
+  cursor: pointer;
+  border-bottom: 1px solid white;
+}
+
+nav span:hover i {
+  color: gold;
+}
+
+nav span.activeClass i {
+  color: gold;
+}
+
+nav span.activeClass {
+  border-bottom-color: #05386b;
+}
+
+/* ============================================== */
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+section img,
+section div {
+  height: auto;
+  width: 100%;
+}
+
+section img {
+  width: 50%;
+}
+
+section div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1em;
+}
+
+@media screen and (max-width: 900px) {
+  section,
+  section:nth-child(even) {
+    flex-direction: column;
+  }
+
+  section img {
+    height: auto;
+    width: auto;
+    max-width: 100vw;
+  }
+}
+
+.homeContainer video {
+  min-width: 100%;
+  min-height: 100%;
+
+  width: auto;
+  height: auto;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 50%;
+  filter: grayscale(100%);
+}
+
+/* #background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: grayscale(100%);
+  opacity: 99%;
+} */
+
+.contactform {
+  width: 50%;
+}
+
+.contactform input,
+textarea {
+  width: 100%;
+  margin: 0.5em;
+  padding: 0.5em;
+  border: 1px solid #05386b;
+  border-radius: 5px;
+  font-size: "1em";
+  font-family: "Merriweather";
+  color: #05386b;
+}
+
+.contactform button {
+  width: 40%;
+  margin: 0.5em;
+  padding: 0.5em;
+  border: 1px solid #05386b;
+  border-radius: 5px;
+  font-size: "1em";
+  font-family: "Merriweather";
+  color: #05386b;
+}
