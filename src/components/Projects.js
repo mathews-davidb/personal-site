@@ -96,7 +96,7 @@ const About = () => {
               {" "}
               <a
                 class="btn"
-                href="http://www.google.com"
+                href="https://goofy-mayer-f00d76.netlify.app/"
                 style={{
                   textDecoration: "none",
                   color: "#05386B",
