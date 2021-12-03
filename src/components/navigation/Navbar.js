@@ -6,6 +6,9 @@ import "../Style.css";
 const Nav = () => {
   return (
     <nav>
+      {navLinks.map(({ navLinkId, scrollToId }, idx) => (
+        <NavLink key={idx} navLinkId={navLinkId} scrollToId={scrollToId} />
+      ))}
       <a href="https://www.linkedin.com/in/davidb-mathews/">
         <img
           class="social"
@@ -15,15 +18,11 @@ const Nav = () => {
             height: "35px",
             width: "auto",
             marginLeft: "2em",
-            marginTop: "0.9em",
-            marginRight: "1em",
+            marginTop: "-0.1em",
+            marginRight: "2em",
           }}
         />
       </a>
-
-      {navLinks.map(({ navLinkId, scrollToId }, idx) => (
-        <NavLink key={idx} navLinkId={navLinkId} scrollToId={scrollToId} />
-      ))}
     </nav>
   );
 };

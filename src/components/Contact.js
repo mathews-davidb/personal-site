@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Slide, toast } from "react-toastify";
+import video from "./media/codebackground.mp4";
 
 import { useNav } from "./Hooks";
 import "./Style.css";
@@ -18,17 +19,20 @@ const Contact = () => {
     setEmail("");
     setMessage("");
     console.log(email, name, message);
-    const response = await fetch("http://localhost:3000/send", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        message: message,
-      }),
-    });
+    const response = await fetch(
+      "https://mighty-bastion-55692.herokuapp.com/send",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message,
+        }),
+      }
+    );
     console.log("working");
   };
 
@@ -38,7 +42,7 @@ const Contact = () => {
       id="contactContainer"
       style={{ backgroundColor: "#5cdb95", height: "100%" }}
     >
-      <div style={{}}>
+      <div class="video-container">
         <h1
           style={{
             fontFamily: "Rock Salt",
@@ -111,6 +115,9 @@ const Contact = () => {
             </button>
           </form>
         </div>
+        <video autoPlay loop muted>
+          <source src={video} type="video/mp4" />
+        </video>
       </div>
     </section>
   );

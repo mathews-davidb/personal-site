@@ -15,11 +15,14 @@ const Home = (props) => {
         backgroundColor: "#5cdb95",
       }}
     >
-      <div style={{ marginTop: "-4em" }}>
+      <div
+        class="video-container"
+        style={{ marginTop: "-2em", opacity: "0.9" }}
+      >
         <div style={{ display: "grid", gridTemplateColumns: "50% 50%" }}>
           <div>
             <img
-              style={{ marginRight: "-10rem", height: "25em", width: "auto" }}
+              style={{ marginRight: "-10rem", height: "30em", width: "auto" }}
               class="face"
               src={"images/face.png"}
               alt="MY FACE"
@@ -118,9 +121,9 @@ const Home = (props) => {
             | Critical Thinking
           </div>
         </div>
-        {/* <video id="background-video" autoPlay loop muted>
+        <video id="background-video" autoPlay loop muted>
           <source src={video} type="video/mp4" />
-        </video> */}
+        </video>
       </div>
     </section>
   );

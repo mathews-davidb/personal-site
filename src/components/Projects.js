@@ -9,7 +9,7 @@ const About = () => {
     <section
       ref={projectsRef}
       id="projectsContainer"
-      style={{ height: "100%" }}
+      style={{ height: "100%", backgroundColor: "white" }}
     >
       <div>
         <div style={{ display: "grid", gridTemplateColumns: "50% 50%" }}>
